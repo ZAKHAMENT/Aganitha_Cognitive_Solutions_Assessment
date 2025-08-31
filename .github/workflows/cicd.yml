@@ -1,6 +1,6 @@
 
 name: CI/CD Fullstack
-#
+
 on:
   push:
     branches: ["main"]
