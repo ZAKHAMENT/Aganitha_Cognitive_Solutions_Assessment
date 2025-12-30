@@ -7,7 +7,8 @@ export default function PasteView({ pasteId }) {
   useEffect(() => {
     async function fetchPaste() {
       try {
-        const res = await fetch(`http://localhost:3001/api/pastes/${pasteId}`);
+        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+        const res = await fetch(`${API_BASE_URL}/api/pastes/${pasteId}`);
         if (!res.ok) {
           setError('Paste not found or unavailable');
           return;

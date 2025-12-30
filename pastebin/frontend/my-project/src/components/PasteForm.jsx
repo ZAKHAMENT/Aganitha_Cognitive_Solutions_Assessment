@@ -16,8 +16,9 @@ export default function PasteForm() {
       const body = { content };
       if (ttl) body.ttl_seconds = parseInt(ttl);
       if (maxViews) body.max_views = parseInt(maxViews);
+        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
-      const res = await fetch('http://localhost:3001/api/pastes', {
+      const res = await fetch(`${API_BASE_URL}/api/pastes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
