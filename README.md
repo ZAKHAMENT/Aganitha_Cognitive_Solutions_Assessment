@@ -48,6 +48,6 @@ A lightweight Pastebin-like application for creating, sharing, and viewing text 
 - npm start
   
 - Environment Variables
-  MONGO_URI=<your-connection-string>
+  MONGO_URL=<your-connection-string>
   TEST_MODE=1
   PORT=3001
