@@ -20,13 +20,13 @@ app.use(cors({
 
 
 const PORT = process.env.PORT;
-const DB_URI = process.env.MONGO_URI;
+const DB_URL = process.env.MONGO_URI;
 
-if (!DB_URI) {
-  throw new Error('DB_URI not set');
+if (!DB_URL) {
+  throw new Error('DB_URL not set');
 }
 
-mongoose.connect(DB_URI)
+mongoose.connect(DB_URL )
   .then(() => console.log('MongoDB connected'))
   .catch((err) => {
     console.error('MongoDB error:', err);
