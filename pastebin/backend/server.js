@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Paste from './models/Paste.js';
 import { getNow } from './utils/time.js';
-import { escapeHtml } from './utils/escapeHTML.js';
+import { escapeHtml } from './utils/escapeHtml.js';
 
 dotenv.config();
 
