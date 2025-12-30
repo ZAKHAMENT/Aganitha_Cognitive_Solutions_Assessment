@@ -20,7 +20,7 @@ app.use(cors({
 
 
 const PORT = process.env.PORT;
-const DB_URL = process.env.MONGO_URI;
+const DB_URL = process.env.DB_URL;
 
 if (!DB_URL) {
   throw new Error('DB_URL not set');
